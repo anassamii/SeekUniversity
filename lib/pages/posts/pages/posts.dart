@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ocr_app/bloc/theme.bloc.dart';
 import 'package:ocr_app/widgets/drawer.widget.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ocr_app/pages/posts/view/components/itemPage.dart';
+import 'package:ocr_app/pages/posts/components/itemPage.dart';
 
 class Posts extends StatelessWidget {
   @override

@@ -1,4 +1,4 @@
-import 'package:ocr_app/pages/posts/model/data.dart';
+import 'package:ocr_app/model/data.dart';
 import 'package:flutter/material.dart';
 
 class Details extends StatefulWidget {

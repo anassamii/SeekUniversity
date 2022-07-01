@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:login_register_auth/ui/widgets/auth_form.dart';
+import 'package:ocr_app/widgets/auth_form.dart';
 
 enum AuthType { login, register }
 
 class AuthScreen extends StatelessWidget {
   final AuthType authType;
 
-  const AuthScreen({Key key, this.authType}) : super(key: key);
+  const AuthScreen({Key? key, required this.authType}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,17 +32,17 @@ class AuthScreen extends StatelessWidget {
                     children: <Widget>[
                       SizedBox(height: 65),
                       Text(
-                        'Hello!',
+                        'Fill the form below',
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 32,
+                            fontSize: 23,
                             fontWeight: FontWeight.w600,
                             letterSpacing: 1.2),
                       ),
                       Hero(
                         tag: 'logoAnimation',
                         child: Image.asset(
-                          'assets/images/logo.png',
+                          'images/logo.png',
                           height: 250,
                         ),
                       ),

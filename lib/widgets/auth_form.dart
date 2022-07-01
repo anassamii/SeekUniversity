@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:login_register_auth/ui/screens/auth_screen.dart';
-import 'package:login_register_auth/ui/widgets/original_button.dart';
-import 'package:login_register_auth/services/auth.dart';
+import 'package:ocr_app/pages/login/auth_screen.dart';
+import 'package:ocr_app/widgets/original_button.dart';
+import 'package:ocr_app/services/auth.dart';
 
 class AuthForm extends StatefulWidget {
   final AuthType authType;
 
-  const AuthForm({Key key, @required this.authType}) : super(key: key);
+  const AuthForm({Key? key, required this.authType}) : super(key: key);
 
   @override
   _AuthFormState createState() => _AuthFormState();
@@ -34,7 +34,7 @@ class _AuthFormState extends State<AuthForm> {
                 _email = value;
               },
               validator: (value) =>
-                  value.isEmpty ? 'You must enter a valid email' : null,
+                  value!.isEmpty ? 'You must enter a valid email' : null,
             ),
             SizedBox(height: 10),
             TextFormField(
@@ -45,17 +45,17 @@ class _AuthFormState extends State<AuthForm> {
               onChanged: (value) {
                 _password = value;
               },
-              validator: (value) => value.length <= 6
+              validator: (value) => value!.length <= 6
                   ? 'Your password must be larger than 6 characters'
                   : null,
             ),
             SizedBox(height: 20),
             OriginalButton(
-              text: widget.authType == AuthType.login ? 'Login' : 'Register',
+              text: widget.authType == AuthType.login ? 'login' : 'Register',
               color: Colors.lightBlue,
               textColor: Colors.white,
               onPressed: () async {
-                if (_formKey.currentState.validate()) {
+                if (_formKey.currentState!.validate()) {
                   if (widget.authType == AuthType.login) {
                     await authBase.loginWithEmailAndPassword(_email, _password);
                     Navigator.of(context).pushReplacementNamed('home');

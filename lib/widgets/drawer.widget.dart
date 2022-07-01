@@ -7,13 +7,11 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final menus=[
-      {"title":"Home", "icon": Icon(Icons.home, color: Theme.of(context).primaryColor,), "route":"/"},
-      {"title":"OCR", "icon": Icon(Icons.ac_unit, color: Theme.of(context).primaryColor), "route":"/ocr"},
-      {"title":"Face Detector", "icon": Icon(Icons.face, color: Theme.of(context).primaryColor), "route":"/face"},
+      {"title":"Home", "icon": Icon(Icons.home, color: Theme.of(context).primaryColor,), "route":"home"},
+      {"title":"Search universities", "icon": Icon(Icons.search, color: Theme.of(context).primaryColor), "route":"/search"},
       {"title":"QR Code Generate", "icon": Icon(Icons.qr_code, color: Theme.of(context).primaryColor), "route":"/QR"},
-      {"title":"QR Scan & Generate", "icon": Icon(Icons.qr_code, color: Theme.of(context).primaryColor), "route":"/scanQR"},
-      {"title":"Graphics", "icon": Icon(Icons.grading, color: Theme.of(context).primaryColor), "route":"/graphics"},
-      {"title":"Github Users", "icon": Icon(Icons.verified_user, color: Theme.of(context).primaryColor), "route":"/users"},
+      {"title":"QR Scan & Generate", "icon": Icon(Icons.camera, color: Theme.of(context).primaryColor), "route":"/scanQR"},
+      {"title":"Logout", "icon": Icon(Icons.logout, color: Theme.of(context).primaryColor), "route":"login"},
     ];
     return Drawer(
       child: Column(

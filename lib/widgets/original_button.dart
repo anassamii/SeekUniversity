@@ -6,7 +6,7 @@ class OriginalButton extends StatelessWidget {
   final Color color;
   final Color textColor;
 
-  const OriginalButton({Key key, this.text, this.onPressed, this.color, this.textColor}) : super(key: key);
+  const OriginalButton({Key? key, this.text='', required this.onPressed, required this.color, required this.textColor}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return SizedBox(

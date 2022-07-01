@@ -1,5 +1,5 @@
-import 'package:ocr_app/pages/posts/model/data.dart';
-import 'package:ocr_app/pages/posts/view/pages/details.dart';
+import 'package:ocr_app/model/data.dart';
+import 'package:ocr_app/pages/posts/pages/details.dart';
 import 'package:flutter/material.dart';
 
 class Item extends StatelessWidget {
